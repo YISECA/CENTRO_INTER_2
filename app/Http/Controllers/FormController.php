@@ -1,97 +1,25 @@
 <?php
-
-
-
 namespace App\Http\Controllers;
-
-
-
-
-
 use Illuminate\Http\Request;
-
-
-
 use App\Http\Controllers\Controller;
-
-
-
 use Illuminate\Routing\Controller as BaseController;
-
-
-
 use Illuminate\Support\Facades\DB as DB;
-
-
-
 use Redirect;
-
-
-
 use Validator;
-
-
-
 use Session;
-
-
-
 use App\Form;
-
-
-
 use Idrd\Usuarios\Repo\Departamento;
-
-
-
 use Idrd\Usuarios\Repo\Pais;
-
-
-
 use Idrd\Usuarios\Repo\Ciudad;
-
-
-
 use Idrd\Usuarios\Repo\Localidad;
-
-
-
 use Idrd\Usuarios\Repo\Acceso;
-
-
-
 use Mail;
 
-
-
 class FormController extends BaseController
-
 {
-
-    /**
-
-     * Display a listing of the resource.
-
-     *
-
-     * @return \Illuminate\Http\Response
-
-     */
-
-
-
     var $url;
 
-
-
-
-
-
-
     private function cifrar($M)
-
-
-
     {   
 
       $C="";
